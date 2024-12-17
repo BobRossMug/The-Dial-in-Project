@@ -1,0 +1,22 @@
+# Ignore Unity-specific temporary files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# Ignore JetBrains Rider and Visual Studio files
+.vs/
+*.csproj
+*.sln
+*.unityproj
+*.user
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Unity crash logs
+sysinfo.log

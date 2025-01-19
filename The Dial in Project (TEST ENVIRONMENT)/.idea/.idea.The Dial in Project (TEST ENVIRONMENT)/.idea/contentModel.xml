@@ -6,7 +6,10 @@
     <e p="C:\Users\onurm\Desktop\The-Dial-in-Project\The Dial in Project (TEST ENVIRONMENT)" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="GitTestScript.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="GitTestScript.cs" t="Include" />
+          <e p="SimManager.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

@@ -14,10 +14,14 @@
           <e p="SimManager.cs" t="Include" />
           <e p="UI Stuffs.cs" t="Include" />
         </e>
+        <e p="Tests" t="Include">
+          <e p="EditTest.cs" t="Include" />
+        </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Tests.csproj" t="IncludeRecursive" />
       <e p="The Dial in Project (TEST ENVIRONMENT).sln" t="IncludeFlat" />
     </e>
   </component>

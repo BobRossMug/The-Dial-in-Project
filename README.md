@@ -23,3 +23,4 @@ I wrote metrics down, such as :
 
 
 Everything else about the proeject is in the Wiki!
+Disclaimer : Before 00:00 today (20/01/2025) I still haven't reached the final version of this repo. I'll delete this as soon as it is finished and ready for grading eyes :)

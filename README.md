@@ -8,11 +8,17 @@ https://coffeerem.com/product/colombia-santa-monica-washed-coconut/
 In sumamry the way the data was acquired was the following :
 
 I had 90 shots of double espresso
+
 I wrote metrics down, such as :
+
 -grind size (Eureka Dolce Vita with ARO dial, 0 to 165 scope on the micrometric system)
+
 -grind dose (by grams)
+
 -extraction length (seconds)
+
 -final cup size (grams)
+
 -taste optimisation (this was a grading system of 1 to 10, in comparison to all previous shots, and desired flavours foretold by the roaster)
 
 

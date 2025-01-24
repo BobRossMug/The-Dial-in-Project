@@ -1,9 +1,9 @@
 
+Disclaimer : Project is NOT ready for grading
 
 
 Everything else about the proeject is in the Wiki!
 
-Disclaimer : Project is ready for grading, below are links to the wiki, where all is explained : 
 
 
 https://github.com/BobRossMug/The-Dial-in-Project/wiki

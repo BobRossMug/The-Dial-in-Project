@@ -39,7 +39,7 @@ public class GrindSettings : MonoBehaviour {
         SimManager.Instance.isGrinding = true;
     } /* end StartGrinding */ //
 
-    void FinishGrinding() {
+    /* void FinishGrinding() {
         isGrinding = false;
         SimManager.Instance.isGrinding = false;
         
@@ -53,6 +53,49 @@ public class GrindSettings : MonoBehaviour {
         SimManager.Instance.ModifyCoffeeQuality(finalGrindQuality);
         
         Debug.Log($"Finished Grinding: Time penalty {timePenalty}, Grind penalty {grindSizePenalty}, Final: {finalGrindQuality}");
-    }/* end FinishGrinding */ //
+    }*/ 
+    
+    
+    public void FinishGrinding() {
+        // Mark grinding as finished
+        isGrinding = false;
+        SimManager.Instance.isGrinding = false;
+
+        // Calculate penalties
+        float baseQuality = selectedBean.GetBaseQuality();
+        float timePenalty = CalculateTimePenalty(currentGrindTimer, grindTimePenalty);
+        float grindSizePenalty = CalculateGrindSizePenalty(idealGrindSize, grindSize);
+
+        // Compute final grind quality
+        float finalGrindQuality = CalculateFinalGrindQuality(baseQuality, timePenalty, grindSizePenalty);
+
+        // Update the game manager's coffee quality
+        SimManager.Instance.ModifyCoffeeQuality(finalGrindQuality);
+
+        // Log the details
+        LogGrindingDetails(timePenalty, grindSizePenalty, finalGrindQuality);
+    }  /* end FinishGrinding */ //
+
+    private float CalculateTimePenalty(float grindTimer, float penaltyMultiplier) {
+        return grindTimer * penaltyMultiplier;
+    }
+
+    private float CalculateGrindSizePenalty(float idealSize, float actualSize) {
+        return Mathf.Abs(idealSize - actualSize);
+    }
+
+    private float CalculateFinalGrindQuality(float baseQuality, float timePenalty, float grindSizePenalty) {
+        return baseQuality - (timePenalty + grindSizePenalty);
+    }
+
+    private void LogGrindingDetails(float timePenalty, float grindSizePenalty, float finalQuality) {
+        Debug.Log($"Finished Grinding: Time penalty {timePenalty}, Grind penalty {grindSizePenalty}, Final: {finalQuality}");
+    }
+    
+    
+    
+    
+    
+  
     
 }/* end Script */ ///

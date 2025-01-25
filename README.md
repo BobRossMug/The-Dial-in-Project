@@ -27,19 +27,30 @@ The Dial-in project is a simple video-game-alike simulation for learning how to 
 ## Task :one: : Use and Understand GIT :red_circle:
 ### Task Description : Use and understand GIT, and be able to apply the basic commands. Can you experiment with time travelling or branches/merges? E.g. add some screenshots, add a paragraph text or show by reference/link into the commits, that you applied all the commands.
 ---
+I used Git as console and as the desktop app extensively thoughout the project. Though I did not use multiple computers or collaborate on the project file it has certainly made things more organized. Below are some screenshots:
+
+![git 2](https://github.com/user-attachments/assets/27f0a7e9-def1-40c5-bf3f-9a994a986988)
+
+I have some previous experience with using the console so I've also tried out the desktop app. This is also very convenient. Most necessary functions were easy to find.
+
+![Git Desktop app](https://github.com/user-attachments/assets/a8e93465-d97c-4166-9f4e-a001fc861408)
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ## Task :two: : UML :white_check_mark: :red_circle: //USE CASE DIAGRAM IS WRONG
 ### Task Description : at least 3 big different diagrams. "big" means you can pump it up artificially as written in DDD. You have 10 million $ from me! Please export the pics. I can not install all the tools to view them! For example, these diagrams are a good idea: Use-Case, Component D, Class D, and Activity Diagram.
 ---
+The project has 3 UML diagrams, for which I used Lucidchart. You can find them below : 
+
+Class Diagram 
 ![UML - Class Diagram](https://github.com/user-attachments/assets/22317317-f4e6-40ff-bb77-ca3d6e3bc37b)
-Class Diagram ^
 
+Use Case Diagram  // FIX USE CASE DIAGRAM
 ![UML - Use Case](https://github.com/user-attachments/assets/35336108-a9aa-4832-b182-16219bcb8f5d)^
-Use Case Diagram ^^  // FIX USE CASE DIAGRAM
 
+Activity Diagram 
 ![UML - Activity Diagram](https://github.com/user-attachments/assets/915f57dc-3daa-4040-b56f-0be5727edb1c)
-Activity Diagram ^^^
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ## Task :three: : REQUIREMENTS :white_check_mark: :red_circle: // MISSING PROFESSIONAL TOOL

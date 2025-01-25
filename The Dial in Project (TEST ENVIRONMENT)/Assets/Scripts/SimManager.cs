@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SimManager : MonoBehaviour {
 
-    public static SimManager Instance;
+    public static SimManager Instance; // Prev. GameManager
 
     [Header("Game States")]
     public bool isGrinding;
@@ -28,9 +28,17 @@ public class SimManager : MonoBehaviour {
         } else {
             Destroy(gameObject);
         }
-        
-        DontDestroyOnLoad(gameObject);
+
+        DontDestorNestedCall();
     } /* end Awake */ //
+
+    //private void NewMethod_R2Test() {
+    //    DontDestroyOnLoad(gameObject);
+    //}
+    
+    private void DontDestorNestedCall() {
+        DontDestroyOnLoad(gameObject);
+    }
     
     void Start() {
         

@@ -117,8 +117,11 @@ This example is a function extract, as a way to call DontDestroyOnLoad in a more
 I used intelliJ as my IDE, as it has been my default choice for the last 10 years. JetBrains Rider is a very powerful IDE to use alongside Unity. Here are my favorite shortcut : 
 
 `Double Shift` : General search function. I use this mostly to switch between scripts 
+
 `CTRL+Shift+E` : Navigate to recent. This is also useful to locate assets with attached scripts within unity straight from the code environment
+
 `CTRL+K` : Commit! This is very useful. In Rider it automatically directs you to the commit message screen
+
 `CTRL+Alt+Shift+T` Refactor "this". Useful when refactoring multiple things
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

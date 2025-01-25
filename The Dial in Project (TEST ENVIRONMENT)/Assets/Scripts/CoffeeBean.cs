@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*public class CoffeeBean : MonoBehaviour {
+public class CoffeeBean : MonoBehaviour {
     
     public string beanName;
     public string origin;
@@ -13,12 +13,12 @@ using UnityEngine;
         // Light roasts might have higher “complexity,” dark roasts might have more “body” etc.
         float baseQuality = 50f + (roastLevel - 50f) * 0.5f;
         return Mathf.Clamp(baseQuality, 0f, 100f);
-    } /* end GetBaseQualityt */ ///
+    } /* end GetBaseQuality */ ///
     
-}/* end Script */ ////*/
-                  ///
-                  ///
-                  /// using System.Collections;
+}/* end Script */ ////
+
+
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -47,7 +47,7 @@ public class CoffeeBean : MonoBehaviour {
             }
         }
     }/* end Update */ //
-
+/*
     public void StartGrinding(CoffeeBean bean) {
         if (isGrinding) return;
         
@@ -59,7 +59,7 @@ public class CoffeeBean : MonoBehaviour {
         SimManager.Instance.isGrinding = true;
     } /* end StartGrinding */ //
 
-    public void FinishGrinding() {
+/*   public void FinishGrinding() {
         // Mark grinding as finished
         isGrinding = false;
         SimManager.Instance.isGrinding = false;
@@ -95,5 +95,5 @@ public class CoffeeBean : MonoBehaviour {
         Debug.Log($"Finished Grinding: Time penalty {timePenalty}, Grind penalty {grindSizePenalty}, Final: {finalQuality}");
     }
 
-}/* end Script */ ///
+}/* end Script */ /// 
 

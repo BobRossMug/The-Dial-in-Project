@@ -94,6 +94,7 @@ Please refer to this document for a detailed analysis. This document was initial
 ### Task Description : (A) Do an Event-Storming to find your Domains! If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) (B). Drop your Domains into a Core Domain Chart (C) and indicate the Relations = Mappings (! see MIRO examples again) between the Domains in a new diagram!
 ---
 
+![WhatsApp Görsel 2025-01-20 saat 22 53 06_931e5ec3](https://github.com/user-attachments/assets/fd4d8cdb-91b0-4d0e-a60c-02f51787e23b)
 
 
 ## Task :six: : METRICS :white_check_mark: 

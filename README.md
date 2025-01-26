@@ -15,11 +15,16 @@ The Dial-in project is a simple video-game-alike simulation for learning how to 
 - [Additional Pictures / Stories](https://github.com/BobRossMug/The-Dial-in-Project/wiki/Pictures-and-cool-Stuff--PLUS--Some-stories)
 
 ---
----
+
+## A ) Project Description
+The Dial-in project is a simple video-game-alike simulation for learning how to dial in coffee with an espresso machine. Having worked in the industry for a couple long years and done it as a hobby longer than that, I know a thing or two about good espresso, and hopefully this project will be a nice bridge for those who want to get into the hobby. 
+
+There are similar applications to this, but they are mostly for tracking extraction data, not simulating it. This projects aim is to teach about the process, rather than help with it. 
+
+The project as a whole was written with C#, using Unity as a game engine.
 
 
-## List of Tasks (Software Engineering) :exclamation::exclamation::exclamation: 
----
+## B ) List of Tasks (Software Engineering) :exclamation::exclamation::exclamation: 
 ## Task :one: : Use and Understand GIT :white_check_mark:
 ### Task Description : Use and understand GIT, and be able to apply the basic commands. Can you experiment with time travelling or branches/merges? E.g. add some screenshots, add a paragraph text or show by reference/link into the commits, that you applied all the commands.
 ---
@@ -64,28 +69,99 @@ Advanced Tool : Jira
 ![Jira](https://github.com/user-attachments/assets/04c2d0f0-4192-4934-87f0-30ce22792ef0)
 [Here is also a link for the Jira board](https://s-eng.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiZjU4MzZiM2EzMTQ5NDkxMWFkMDY0Y2QzNzdjOTUyYzIiLCJwIjoiaiJ9) (I hope it is public now, please excuse me if not No. 2)
 
-## Task :four: : ANALYSIS :red_circle: //////////////////////////////////////////////////////
+## Task :four: : ANALYSIS :white_check_mark: 
 ### Task Description : A) Think about your checklist (on an extra A4 page) from all the points of the ‘ANA - Analysis’ learning unit, with the points that you consider relevant for your project (e.g. 10-15 instead of 30 on the overall picture) B) Carry out an analysis of your semester project / your favourite project. Or have a start-up idea and would like to hand in the start-up analysis as part of a large documentary! There should be at least 2 pages. Take the 10-15 points from the checklist (with e.g. 1-2 paragraphs per point). Assume that you will soon have a fishing rod for the start-up chapter. If you are successful, you would receive a lot of ‘money’ in order to be allowed to design and implement it later. So get your start-up off to a successful start! The use of large language models is explicitly encouraged here! However, don't try to solve everything with one prompt and then submit 10 pages: get specific help!Provide the prompts in brackets that have helped you to improve or structure something here! Please find the sweet spot between your own work/testing and content generation in order to learn something yourself throughout the entire process!
 ---
+Below you can find my ANA check list : 
+<pre>
+1. Problem Definition                      2. Target Audience
+3. Unique Selling Proposition (USP)        4. Competitor Analysis
+5. Core Features                           6. Monetization Strategy
+7. Technical Feasibility                   8. User Experience (UX) Design
+9. Data Privacy and Security               10. Scalability
+11. Market Validation                      12. Development Timeline
+13. Risks and Challenges                   14. Innovation Potential
+15. Future Expansion                       16. Market Analysis
+17. Revenue Model                          18. Risk Analysis
+19. Legal and Ethical Considerations       20. Stakeholder Analysis
+</pre>
+
+Please refer to this document for a detailed analysis. This document was initially generated with AI, but most of these parts have been removed. There is still some prompt related content in there though :   [ANA Software Eng..pdf](https://github.com/user-attachments/files/18549032/ANA.Software.Eng.pdf)
 
 
-## Task :five: : DDD :red_circle: //////////////////////////////////////////////////////
+
+## Task :five: : DDD :red_circle: ////////////////////////////////////////////////////// Core Domain Chart + Event Storming + Context Mapping
 ### Task Description : (A) Do an Event-Storming to find your Domains! If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) (B). Drop your Domains into a Core Domain Chart (C) and indicate the Relations = Mappings (! see MIRO examples again) between the Domains in a new diagram!
 ---
 
 
 
-## Task :six: : METRICS :red_circle: //////////////////////////////////////////////////////
+## Task :six: : METRICS :white_check_mark: 
 ### Task Description : at least two. Sonarcube would be great. Other non-trivial metrics are also fine. Run the tools, document the output with screenshots, and explain what these Metrics or e.g. style errors mean!
 ---
+I used the built in Unity profiler to check for performance issues : 
+
+This is on launch : 
+![Metrics Unity profiler](https://github.com/user-attachments/assets/4b0cd7fe-3974-4e77-9a24-43f613888df2)
+
+This is during coffee grinding : 
+![metrics mid analysis](https://github.com/user-attachments/assets/15615d9c-d0f3-4bee-b35d-cb576727f75e)
+
+The metrics in Unity here indicate that the billinear rendering on my faux-pixel art assets are problematic. Also on calling SimManager there is a sudden spike in CPU usage because of the nested DDOL in the code, as the intelliJ metric below indicate : 
+
+![metric intelliJ](https://github.com/user-attachments/assets/7fc2b187-fbb3-4c40-99d5-8ac048b078c5)
+As can be seen, I also made use of the intelliJ metrics tool while working on the project. I mostly used this to eliminate unused parts of the code and handling immutability for the sake of task 14. The image above is the final state of the inspector.
 
 
-
-
-## Task :seven: : CLEAN CODE DEVELOPMENT :red_circle: //////////////////////////////////////////////////////
+## Task :seven: : CLEAN CODE DEVELOPMENT :white_check_mark: 
 ### Task Description : A) At least 5 points you can show me with an explanation of why this is clean code in your code and/or what has improved & B) >>10 points on your personal CCD cheat sheet. E.g. a PDF.
 ---
+Below are 5 examples of Clean Coding from what I've written for this project : 
 
+### 1 - Meaningful Variable and Function Names : 
+The variable and function names are self explanatory and descriptive. 
+```csharp
+public float brewTime = 5f;
+public void StartBrewing() { /* Begins brewing */ }
+```
+*************************************************************************************************************************
+### 2 - Single Responsibility Principle (SRP)
+Scripts handle one specific responsibilty, or are otherwise modular.
+
+`EspressoMachine` focuses on the brewing logic and is directly attached to the espresso machine asset in Unity
+`GrindSettings` handles the grinder logic, its settings and how it handles the data sent to the brew module
+`UIStuffs` Manages UI stuffs!
+
+This makes the code modular and easy to maintain as well as develop. Each class is clearly defined as to what they do.
+*************************************************************************************************************************
+### 3 - Readable and Modular Logic
+More complex logic (like in `GrindSettings`) is borken down to smaller, easy to call helper methods, below is an example of `CalculateTimePenalty()` :
+```csharp
+private float CalculateTimePenalty(float grindTimer, float penaltyMultiplier) {
+    return grindTimer * penaltyMultiplier;
+}
+```
+This improves readability, makes functions easier to work on, and also independently testable.
+*************************************************************************************************************************
+### 4 - Avoiding Nested Logic
+Instead of nested conditionals, the code uses simpler logic that is concise and self explanatory. This is not only good practice in coding, but especially so for game development!
+```csharp
+if (currentBrewTimer >= brewTime) {FinishBrewing();}
+```
+*************************************************************************************************************************
+### 5 - Consistent Formatting and Comments
+The code is consistently formatted with proper indentation. Comments are also in the code to explain functions at a glance. 
+```csharp
+public void StartBrewing() {
+    if (isBrewing) return;  // Prevent multiple brewing sessions.
+    isBrewing = true;
+    currentBrewTimer = 0f;
+} /* end StartBrewing */ ///
+```
+This improves readability across the entirety of the code.
+*************************************************************************************************************************
+
+Here is my cheat sheet :  [Cheat Sheet.pdf](https://github.com/user-attachments/files/18549156/Cheat.Sheet.pdf)
 
 
 ## Task :eight: : REFACTORING :white_check_mark:

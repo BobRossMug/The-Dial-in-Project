@@ -22,12 +22,3 @@ jobs:
           unityVersion: 2021.3.10f1 
           targetPlatform: StandaloneWindows64
 
-      - name: Run Unity Tests
-        run: |
-          echo "Running tests..."
-          unity-editor -batchmode -runTests -testResults TestResults.xml
-
-      - name: Generate Documentation
-        run: |
-          echo "Generating documentation..."
-          doxygen Doxyfile

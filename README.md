@@ -9,7 +9,7 @@ The Dial-in project is a simple video-game-alike simulation for learning how to 
 ---
 
 ## Content and Hyperlinks 
-- [The Tasks (AKA project requirements / T1-15 / Software Engineering Tasks)](#list-of-tasks-software-engineering)
+- [The Tasks (AKA project requirements / T1-15 / Software Engineering Tasks)](#B\)list-of-tasks-software-engineering)
 - [Wiki](https://github.com/BobRossMug/The-Dial-in-Project/wiki)
 - [Git History](https://github.com/BobRossMug/The-Dial-in-Project/wiki/_history)
 - [Additional Pictures / Stories](https://github.com/BobRossMug/The-Dial-in-Project/wiki/Pictures-and-cool-Stuff--PLUS--Some-stories)

@@ -90,12 +90,26 @@ Please refer to this document for a detailed analysis. This document was initial
 
 
 
-## Task :five: : DDD :red_circle: ////////////////////////////////////////////////////// Core Domain Chart + Event Storming + Context Mapping
+## Task :five: : DDD :white_check_mark: 
 ### Task Description : (A) Do an Event-Storming to find your Domains! If your domain is too small, invent other domains around and document these domains (as if you have 100 Mio € from Edlich-Investment!) (B). Drop your Domains into a Core Domain Chart (C) and indicate the Relations = Mappings (! see MIRO examples again) between the Domains in a new diagram!
 ---
 
-![WhatsApp Görsel 2025-01-20 saat 22 53 06_931e5ec3](https://github.com/user-attachments/assets/fd4d8cdb-91b0-4d0e-a60c-02f51787e23b)
+Domain Mapping)
 
+![Domain Mapping](https://github.com/user-attachments/assets/cb9972fb-93eb-486c-9325-b496dfa5b317)
+
+Event Storming )
+
+![UML class - Project Dial-in (3)](https://github.com/user-attachments/assets/011b14f8-a396-4759-9b4f-80f992f5b040)
+
+Context and System Relations)
+
+![Relations](https://github.com/user-attachments/assets/630f1ce4-2b48-4f05-9a35-332dba6a4ae3)
+
+Initial Faux-Event-Storming-Relations-Map)
+
+![WhatsApp Görsel 2025-01-20 saat 22 53 06_931e5ec3](https://github.com/user-attachments/assets/fd4d8cdb-91b0-4d0e-a60c-02f51787e23b)
+This document above is obsolete but I still wanted to share
 
 ## Task :six: : METRICS :white_check_mark: 
 ### Task Description : at least two. Sonarcube would be great. Other non-trivial metrics are also fine. Run the tools, document the output with screenshots, and explain what these Metrics or e.g. style errors mean!
@@ -182,22 +196,46 @@ This example is a function extract, as a way to call DontDestroyOnLoad in a more
 
 
 
-## Task :nine: : BUILD :red_circle: //////////////////////////////////////////////////////
+## Task :nine: : BUILD :white_check_mark: :red_circle:
 ### Task Description : Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could also be disconnected from the project just to learn a build tool!) => to be merged with 7!
 ---
+As I'm working wih Unity I could not utilize these build systems. But luckiy Unity has the BuildPipeline API, which is the same idea.
+
+![Build](https://github.com/user-attachments/assets/9e9ab25a-81eb-44a9-b2a2-5899d248e0a9)
+
+With Unity this doesn't really work well at all, as pretty much every game developed now goes through Steam. Thus build automation works with steamSDK better than anywhere else. But for this I'd need to set up a publish page and a SteamPipe. This costs 100 Euros. But although half functional, this scripting method also works. This is how a manual build screen looks like inside Unity : 
+
+![BuildSettings](https://github.com/user-attachments/assets/a9aae7cc-4ab9-40df-9558-d7d99a78e80e)
 
 
-
-## Task :one::zero: : CONTINOUS DELIVERY :red_circle: //////////////////////////////////////////////////////
+## Task :one::zero: : CONTINOUS DELIVERY :red_circle: 
 ### Task Description : show me your pipeline using e.g. Jenkins, GitHub Actions, GitLab CI, etc. E.g. you can also use Jenkins Pipelining or BlueOcean, etc. But at least insert more than 2 script calls as done in the lecture! (e.g. also call Ant or Gradle or something else).
 ---
+
+For this step I've unfortunately lost because of Unity. I set up a script for a pipeline but Unity's website seems to be unable to handle a license request for a personal account. I'm unsure if this is intentional on their end, but personal licenses do not seem to be functional for this purpose.
+https://github.com/BobRossMug/The-Dial-in-Project/actions
+
+I've spent approximately 8 hours on a seperate repository, and also with a different computer and a new Unity account to set this up to no avail. This is possible in SteamPipe with an automated activation using account mail and password. I've tried this here :
+
+(https://github.com/BobRossMug/The-Dial-in-Project/commit/e292452f0d59b9dfcd919c91412e34188a685a8a)
+
+![pipe](https://github.com/user-attachments/assets/bae18dcc-f09a-46c9-a296-3c07a7953b57)
 
 
 
 ## Task :one::one: : UNIT TESTS :red_circle: //////////////////////////////////////////////////////
 ### Task Description : Integrate some nice UNIT TESTS in your Code to be integrated into the Build!
 ---
+For this step I've used the TestRunner in Unity (for edit and play modes) for a unit test, as well as manually with a script. Examples are below :
 
+Example inside TestRunner : This one just checks everything is fucntional, it doesn't have any specifities. TestRunner is not very complicated as a tool in the free version of Unity.
+![unittest unity](https://github.com/user-attachments/assets/dafc469c-c4fe-47f2-9bbe-bd9f4b00433d)
+
+Example in code : Here I ran an enumeration test. This was the initial test script I wrote to see if everything works well with TestRunner. 
+![RunTime Unity Test](https://github.com/user-attachments/assets/fb44cb69-0f6a-4da0-9346-63cbe04b926d)
+
+Real example in code : Here is an actualy unit test that is useful. 
+![ActualUnitTest](https://github.com/user-attachments/assets/73af1ddd-cd50-403c-ab44-35f627534bf3)
 
 
 ## Task :one::two: : IDE :white_check_mark:

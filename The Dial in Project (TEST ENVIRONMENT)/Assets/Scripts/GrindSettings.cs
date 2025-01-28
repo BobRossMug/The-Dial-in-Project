@@ -7,7 +7,7 @@ public class GrindSettings : MonoBehaviour {
     public CoffeeBean selectedBean;
     
     [Header("Grind Settings")]
-    public float grindSize = 50f;     // 0 = coarse, 100 = fine
+    public readonly float grindSize = 50f;     // 0 = coarse, 100 = fine
     public float grindTime = 2.0f;    // how many seconds to grind
     
     [Header("Resulting Quality Impact")]
@@ -57,24 +57,14 @@ public class GrindSettings : MonoBehaviour {
     
     
     public void FinishGrinding() {
-        // Mark grinding as finished
-        isGrinding = false;
-        SimManager.Instance.isGrinding = false;
-
-        // Calculate penalties
         float baseQuality = selectedBean.GetBaseQuality();
         float timePenalty = CalculateTimePenalty(currentGrindTimer, grindTimePenalty);
         float grindSizePenalty = CalculateGrindSizePenalty(idealGrindSize, grindSize);
-
-        // Compute final grind quality
         float finalGrindQuality = CalculateFinalGrindQuality(baseQuality, timePenalty, grindSizePenalty);
 
-        // Update the game manager's coffee quality
+        // Update state separately
         SimManager.Instance.ModifyCoffeeQuality(finalGrindQuality);
-
-        // Log the details
-        LogGrindingDetails(timePenalty, grindSizePenalty, finalGrindQuality);
-    }  /* end FinishGrinding */ //
+    }
 
     private float CalculateTimePenalty(float grindTimer, float penaltyMultiplier) {
         return grindTimer * penaltyMultiplier;

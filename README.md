@@ -4,7 +4,7 @@ The Dial-in project is a simple video-game-alike simulation for learning how to 
 
 [About Coffee](https://github.com/BobRossMug/The-Dial-in-Project/wiki)
 
-## Disclaimer : Project is NOT ready for grading
+## Disclaimer : Project is ready for grading
 
 ---
 
@@ -269,3 +269,69 @@ In the end I ended up liking it a lot, but I am still going to be concious about
 
 ## Task :one::four: : FUNCTIONAL PROGRAMMING :white_check_mark:
 ### Task Description : 14. prove that you have covered all functional aspects in your code as:, only final data structures, (mostly) side-effect-free functions, the use of higher-order functions, functions as parameters and return values, use closures / anonymous functions. You can also do it outside of your project. Even in other languages such as F#, Clojure, Julia, etc.
+
+Below are 5 examples of Functional Coding from what I've written for this project : 
+
+### 1 - Final Data Structures : 
+Immutable data (contants, readonly and final variables)
+```csharp
+public class GrindSettings : MonoBehaviour{
+    [Header("Grind Settings")]
+    public readonly float idealGrindSize = 55f; // Final value, cannot change
+    public float grindTime = 2.0f;
+
+    public float CalculateGrindPenalty(float grindSize)
+    {
+        return Mathf.Abs(idealGrindSize - grindSize); // Pure function
+    }
+}
+```
+*************************************************************************************************************************
+### 2 - Side Effect Free Functions
+The code uses pure functions that do not alter external state.
+
+```csharp
+public void FinishGrinding() {
+    float baseQuality = selectedBean.GetBaseQuality();
+    float timePenalty = CalculateTimePenalty(currentGrindTimer, grindTimePenalty);
+    float grindSizePenalty = CalculateGrindSizePenalty(idealGrindSize, grindSize);
+    float finalGrindQuality = CalculateFinalGrindQuality(baseQuality, timePenalty, grindSizePenalty);
+
+    // Update state separately
+    SimManager.Instance.ModifyCoffeeQuality(finalGrindQuality);
+}
+```
+*************************************************************************************************************************
+### 3 - Higher Order Functions
+Functions that take other functions as arguments or return functions
+```csharp
+// Higher-Order Function Example
+public float ApplyPenalty(Func<float, float> penaltyFunction, float value){
+    return penaltyFunction(value); // Apply the given function
+}
+
+// Usage
+float timePenalty = ApplyPenalty(v => v * grindTimePenalty, currentGrindTimer);
+```
+*************************************************************************************************************************
+### 4 - Closures and Anonymous Functions
+Use of inline, lambda functions for specific logic. In Unity event Listeners are very useful for this.
+```csharp
+grindSizeSlider.onValueChanged.AddListener(value =>{
+    grinder.grindSize = value;
+    Debug.Log($"Grind size updated to {value}");
+});
+```
+*************************************************************************************************************************
+### 5 - Functions as Parameters/Return Values
+Passing functions around for reuse or returning them.
+```csharp
+public Func<float, float> GetQualityModifier(float multiplier){
+    return quality => quality * multiplier;
+}
+
+// the Function
+Func<float, float> penaltyModifier = GetQualityModifier(0.9f);
+float adjustedQuality = penaltyModifier(100f);
+```
+*************************************************************************************************************************

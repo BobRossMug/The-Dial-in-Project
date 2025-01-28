@@ -196,7 +196,7 @@ This example is a function extract, as a way to call DontDestroyOnLoad in a more
 
 
 
-## Task :nine: : BUILD :white_check_mark: :red_circle:
+## Task :nine: : BUILD :white_check_mark: 
 ### Task Description : Management with any Build System as Ant, Maven, Gradle, etc. (only Travis is perhaps not enough) Do e.g. generate Docs, call tests, etc. (it could also be disconnected from the project just to learn a build tool!) => to be merged with 7!
 ---
 As I'm working wih Unity I could not utilize these build systems. But luckiy Unity has the BuildPipeline API, which is the same idea.
@@ -223,7 +223,7 @@ I've spent approximately 8 hours on a seperate repository, and also with a diffe
 
 
 
-## Task :one::one: : UNIT TESTS :red_circle: //////////////////////////////////////////////////////
+## Task :one::one: : UNIT TESTS :white_check_mark:
 ### Task Description : Integrate some nice UNIT TESTS in your Code to be integrated into the Build!
 ---
 For this step I've used the TestRunner in Unity (for edit and play modes) for a unit test, as well as manually with a script. Examples are below :
@@ -253,11 +253,19 @@ I used intelliJ as my IDE, as it has been my default choice for the last 10 year
 `CTRL+Alt+Shift+T` Refactor "this". Useful when refactoring multiple things
 
 
-## Task :one::three: : AI Coding :red_circle:  //////////////////////////////////////////////////////
+## Task :one::three: : AI Coding :white_check_mark:
 ### Task Description : Set Up an AI-coding environment on your computer like ZED, Aider, free Cursor / Windsurf, GitHub Copilot programs, etc. (some have free tiers). Show your steps and personal experiences! 
 ---
+This part was the most impressive for me. I was hesitant to do this at first but I assumed I may need some extra points, and installed Crusor AI. 
+
+![CrusorAI](https://github.com/user-attachments/assets/432d2d40-59ce-42ab-a7d9-c66befbc651f)
+
+In the example above my prompt was "Okay CrusorAI, I don't like copilot so I came here! Try and impress me." It did well.
+
+There is a lot of contraversy regarding the use of AI applications and tools, even AI assistance with anythinga and everything at the moment. I am definetly not on the "AI will take our jobs" camp yet but I still try to avoid using these tools because I feel like they make me use my brain less. That is a good thing when you are working a 9 to 5 and you need some stuff prototyped FAST, but I would like to conisder myself to still be a learner. ChatGPT is a very useful tool to learn things, but integrating it directly onto the codebase where it can see everything and recommend the best outcomes makes it a better coder, but not me.
+
+In the end I ended up liking it a lot, but I am still going to be concious about my AI consumption and maybe limit it to 1 hour a week at most.
 
 
-
-## Task :one::four: : FUNCTIONAL PROGRAMMING :red_circle: //////////////////////////////////////////////////////
+## Task :one::four: : FUNCTIONAL PROGRAMMING :white_check_mark:
 ### Task Description : 14. prove that you have covered all functional aspects in your code as:, only final data structures, (mostly) side-effect-free functions, the use of higher-order functions, functions as parameters and return values, use closures / anonymous functions. You can also do it outside of your project. Even in other languages such as F#, Clojure, Julia, etc.
